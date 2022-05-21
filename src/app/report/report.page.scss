@@ -1,0 +1,30 @@
+ion-content {
+	text-align: center;
+	
+	#center-block-report {
+		h4 {
+			color: #fff !important;
+			font-weight: 550;
+			// opacity: .85;
+			font-size: 18px;
+			// letter-spacing: 2px !important;
+			margin-bottom: 0 !important;
+		}
+		h6 {
+			color: #fff !important;
+			font-weight: 400;
+			font-size: 14px;
+			margin-top: 4px !important;
+			margin-bottom: 30px !important;
+			margin-right: 32px;
+			margin-left: 32px;
+		}
+		position: absolute;
+		top: -10%;
+		bottom: 0;
+		margin: auto;
+		width: 100%;
+		height: max-content;
+		left: 0;
+	}
+}

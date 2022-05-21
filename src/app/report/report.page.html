@@ -1,0 +1,75 @@
+<!-- <ion-header>
+  <ion-toolbar color="tertiary">
+  	<ion-buttons slot="end">
+      <ion-button icon-only (click)="exit()"><ion-icon name="exit-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>{{"REPORT.rep_tr_1" | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+	<div style="height: 100vh; width: 100vw; background-color: #222; top: 0; bottom: 0; left: 0; right: 0; position: absolute; z-index: 1;">
+		
+	</div>
+	<div *ngIf="completed" style="background: rgba(0,0,0,.7); width: 100%;height: 100vh; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 9999; padding: 20px;">
+		<div id="center-block-report">
+			<br>
+			<img src="assets/check.svg" alt="" style="width: 30%;margin-bottom: 10px;filter: grayscale(1);">
+			<h4>{{"REPORT.rep_tr_2" | translate}}</h4>
+			<h6>{{message}}</h6>
+			<!-- <img src="assets/25.svg" alt="" style="width: 80px; margin-top: 20px"> -->
+		</div>
+	</div>
+	
+	<div style="padding: 0 20px">
+		<br>
+	    <h6 class="tv"> <b> {{"REPORT.rep_tr_3" | translate}} {{hoy}} <br> {{"REPORT.rep_tr_4" | translate}} {{hora}} </b></h6>
+	    <span class="line" style="width: 100%;"></span>
+	    <!-- <h6 class="tv">{{"REPORT.rep_tr_5" | translate}} {{user.level}} {{"REPORT.rep_tr_6" | translate}}</h6>
+	    <span class="line" style="width: 100%;"></span> -->
+	    <!-- <h6 class="tv">{{"REPORT.rep_tr_7" | translate}} {{pain}} {{"REPORT.rep_tr_8" | translate}}</h6>
+	    <span class="line" style="width: 100%;"></span> -->
+	    <h6 class="tv">{{percent}}% {{"REPORT.rep_tr_9" | translate}} {{time}} {{"REPORT.rep_tr_10" | translate}}
+	    	<!-- <ion-icon style="position: relative; font-size: 24px; top: 6px;" name="checkmark-circle-outline"></ion-icon> -->
+	    </h6>
+	    <br>
+
+	    <!-- <button [routerLink]="['/results']" class="btn-mh" style="border-radius: 6px; font-size: 14px; padding: 16px;">
+	    	<ion-icon style="position: relative; top: 2px; margin-right: 4px;" name="bar-chart"></ion-icon>
+	    {{"REPORT.rep_tr_17" | translate}}</button> -->
+
+	    <span class="line" style="width: 100%;"></span>
+
+	    <table>
+	    	<thead>
+	    		<tr>
+	    			<th [innerHtml]='"REPORT.rep_tr_11" | translate'></th>
+	    			<th [innerHtml]='"REPORT.rep_tr_12" | translate'></th>
+	    			<th width="70px" [innerHtml]='"REPORT.rep_tr_13" | translate'></th>
+	    		</tr>
+	    	</thead>
+
+	    	<tbody>
+	    		<tr *ngFor="let r of answers">
+	    			<td [ngClass]="r.user == r.answer ? 'correct' : 'incorrect' ">{{r.user == 'l' ? ('REPORT.rep_tr_15' | translate) : ('REPORT.rep_tr_16' | translate)}}</td>
+	    			<td>{{r.time}} {{"REPORT.rep_tr_14" | translate}}</td>
+	    			<td>{{r.answer == 'l' ? ('REPORT.rep_tr_15' | translate) : ('REPORT.rep_tr_16' | translate)}}</td>
+	    		</tr>
+
+	    		<!-- <tr>
+	    			<td class="incorrect">Derecha</td>
+	    			<td>5,2 seg</td>
+	    			<td>Izquierda</td>
+	    		</tr> -->
+	    	</tbody>
+	    </table>
+
+	    <br>
+	    <!-- <button class="btn-mh" style="border-radius: 6px; font-size: 14px; padding: 16px;">Ver resultados de la semana</button>
+	    <button class="btn-mh" style="border-radius: 6px; font-size: 14px; padding: 16px;">Ver resultados del último mes</button> -->
+	</div>
+
+	<br>
+	<br>
+
+</ion-content>

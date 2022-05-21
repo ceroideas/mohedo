@@ -1,5 +1,7 @@
 {
   "name": "mohedo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

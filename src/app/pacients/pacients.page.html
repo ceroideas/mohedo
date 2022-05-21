@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+  	<ion-buttons slot="start">
+      <ion-back-button text="" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{"PACIENT.pcnt_tr_0" | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-card class="welcome-card" *ngFor="let p of pacients">
+	    <ion-card-header>
+	      <ion-card-title>{{p.name}} <br>
+	      	<small><i>{{p.email}}</i></small></ion-card-title>
+	      <ion-card-subtitle>
+	      	<li><b>{{"PACIENT.pcnt_tr_1" | translate}}</b> {{p.profile.birthday | filters}}</li>
+	      	<li><b>{{"PACIENT.pcnt_tr_2" | translate}}</b> {{p.profile.sex == 'm' ? ("PACIENT.pcnt_tr_6" | translate) : ("PACIENT.pcnt_tr_7" | translate)}}</li>
+	      	<li><b>{{"PACIENT.pcnt_tr_3" | translate}}</b> {{p.profile.weight}}Kg</li>
+	      	<li><b>{{"PACIENT.pcnt_tr_8" | translate}}</b> {{p.profile.heigth}}cm</li>
+	      	<li><b>{{"PACIENT.pcnt_tr_4" | translate}}</b> {{p.profile.punctuation}}</li>
+	      	<li><b>{{"PACIENT.pcnt_tr_5" | translate}}</b> {{p.level}}</li>
+	  	  </ion-card-subtitle>
+	    </ion-card-header>
+	    <ion-card-content>
+
+	    	<div *ngIf="p.profile.information == '[]'">
+	    		{{"PACIENT.pcnt_tr_9" | translate}}
+	    	</div>
+
+	    	<div *ngIf="p.profile.information != '[]'">
+
+	    		<div style="padding: 12px 0;" (click)="profile == p.id ? (profile = null) : (profile = p.id)">{{"PACIENT.pcnt_tr_10" | translate}}</div>
+
+	    		<div *ngIf="profile == p.id">
+			    	<div *ngFor="let i of (p.profile.information | filters:'j')">
+
+			    		<b>{{i.question}}</b> <br>
+
+			    		<span *ngFor="let o of i.options">- {{o.option == 'range' ? o.value : o.option}}</span> <br>
+			    		
+			    		<br>
+			    	</div>
+	    		</div>
+	    	</div>
+
+	    	<ion-button size="small" expand="block" (click)="viewStatistics(p.id)">{{"PACIENT.pcnt_tr_11" | translate}}</ion-button>
+
+	    </ion-card-content>
+	</ion-card>
+
+</ion-content>

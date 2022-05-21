@@ -1,0 +1,29 @@
+ion-content {
+	--background: #6bb1e4;
+	padding: 20px;
+	text-align: center;
+
+	#center-block-splash {
+		h4 {
+			color: #fff !important;
+			font-weight: 550;
+			opacity: .85;
+			font-size: 16px;
+			letter-spacing: 2px !important;
+			margin-bottom: 0 !important;
+		}
+		h3 {
+			color: #fff !important;
+			font-weight: 400;
+			font-size: 29px;
+			margin-top: 4px !important;
+			margin-bottom: 30px !important;
+		}
+		position: absolute;
+		top: -10%;
+		bottom: 0;
+		margin: auto;
+		width: 100%;
+		height: max-content;
+	}
+}

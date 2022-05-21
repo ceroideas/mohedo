@@ -1,0 +1,373 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+  	<ion-buttons slot="start">
+      <ion-back-button text="" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Formulario Participantes {{api.type == 1 ? 'ADOPEC' : (api.type == 2 ? 'UMA' : 'GENERAL')}} | Paso {{param.value}} / 3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<div id="register-header" *ngIf="step == 1">
+		<img src="assets/mohedo-logo.png" alt=""> <span>{{"REG.title" | translate}}</span>
+	</div>
+	<div style="padding: 0 20px" *ngIf="step == 1">
+
+		<!-- <br>
+
+		<h6 class="tv" [innerHTML]="'REG.subtitle' | translate"></h6>
+
+		<br> -->
+
+		<form class="form" [formGroup]="validations_form" (ngSubmit)="registerUser(validations_form.value)">
+
+			<!-- <div class="form-group">
+				<div class="input-group">
+					<div class="input-addon">
+						<ion-icon name="person"></ion-icon>
+					</div>
+					<input type="text" formControlName="name" [placeholder]="'PH.name' | translate">
+				</div>
+				<div class="validation-errors">
+		          <ng-container *ngFor="let validation of validation_messages.name">
+		            <div class="error-message" *ngIf="validations_form.get('name').hasError(validation.type) && (validations_form.get('name').dirty || validations_form.get('name').touched)">
+		              {{ validation.message }}
+		            </div>
+		          </ng-container>
+		        </div>
+			</div> -->
+
+			<!-- <div class="form-group">
+				<div class="input-group">
+					<div class="input-addon">
+						<ion-icon name="key"></ion-icon>
+					</div>
+					<input type="password" formControlName="password" [placeholder]="'PH.pass' | translate">
+				</div>
+				<div class="validation-errors">
+		          <ng-container *ngFor="let validation of validation_messages.password">
+		            <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+		              {{ validation.message }}
+		            </div>
+		          </ng-container>
+		        </div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-addon">
+						<ion-icon name="key"></ion-icon>
+					</div>
+					<input type="password" formControlName="repeat_password" [placeholder]="'PH.repeat' | translate">
+				</div>
+				<div class="validation-errors">
+		          <ng-container *ngFor="let validation of validation_messages.repeat_password">
+		            <div class="error-message" *ngIf="validations_form.get('repeat_password').hasError(validation.type) && (validations_form.get('repeat_password').dirty || validations_form.get('repeat_password').touched)">
+		              {{ validation.message }}
+		            </div>
+		          </ng-container>
+		        </div>
+			</div> -->
+
+			<!-- <br>
+
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-addon">
+						<ion-icon name="mail-outline"></ion-icon>
+					</div>
+					<input type="email" formControlName="email" [placeholder]="'PH.email' | translate">
+				</div>
+				<div class="validation-errors">
+		          <ng-container *ngFor="let validation of validation_messages.email">
+		            <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+		              {{ validation.message }}
+		            </div>
+		          </ng-container>
+		        </div>
+			</div> -->
+
+
+			<!-- <span class="line" style="width: 100%; margin: 0;"></span>
+
+			<ion-item lines="none" class="ion-no-padding">
+				<label style="font-size: 14px">{{"REG.recomended" | translate}}</label>
+				<span>
+					<ion-toggle style="padding: 12px 0 12px 12px;" (ionChange)="changeProf($event)"></ion-toggle>
+				</span>
+			</ion-item>
+
+			<div class="form-group" *ngIf="professional">
+				<div class="input-group">
+					<div class="input-addon">
+						<ion-icon name="add-circle-outline"></ion-icon>
+					</div>
+					<input type="text" formControlName="code" [placeholder]="'PH.code' | translate">
+				</div>
+			</div>
+
+			<span class="line" style="width: 100%;"></span> -->
+
+			<div *ngIf="api.type == 1">
+				
+
+			<div class="form-group">
+				<div style="text-align: left;">
+
+					<br>
+
+					<label>
+						<input type="radio" formControlName="partner_type" value="1">
+
+						Soy socio de Adopec
+					</label>
+				</div>
+
+				<div style="text-align: left;">
+
+					<br>
+
+					<label>
+						<input type="radio" formControlName="partner_type" value="2">
+
+						Colaboro con socio de Adopec
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-addon">
+						<ion-icon name="key"></ion-icon>
+					</div>
+					<input type="text" formControlName="code_partner" placeholder="Escriba el código de socio">
+				</div>
+				<div class="validation-errors">
+		          <ng-container *ngFor="let validation of validation_messages.code_partner">
+		            <div class="error-message" *ngIf="validations_form.get('code_partner').hasError(validation.type) && (validations_form.get('code_partner').dirty || validations_form.get('code_partner').touched)">
+		              {{ validation.message }}
+		            </div>
+		          </ng-container>
+		        </div>
+			</div>
+
+			</div>
+
+			<div *ngIf="api.type == 3">
+
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-addon">
+						<ion-icon name="key"></ion-icon>
+					</div>
+					<input type="text" formControlName="code_partner" placeholder="Escriba el código de profesional">
+				</div>
+				<div class="validation-errors">
+		          <ng-container *ngFor="let validation of validation_messages.code_partner">
+		            <div class="error-message" *ngIf="validations_form.get('code_partner').hasError(validation.type) && (validations_form.get('code_partner').dirty || validations_form.get('code_partner').touched)">
+		              {{ validation.message }}
+		            </div>
+		          </ng-container>
+		        </div>
+			</div>
+
+			</div>
+
+
+
+			<br>
+
+			<!-- <span class="line"></span> -->
+
+			<div class="data-info" style="text-align: justify; padding: 16px;">
+				<!-- {{"REG.info" | translate}} -->
+				<h5 style="margin-top: 0;">INFORMACIÓN</h5>
+				Me dirijo a usted para informarle sobre un estudio al que se le invita a participar.
+				App-Mohedo® es una herramienta versionada en una aplicación para dispositivos móviles, que ayuda a trabajar la activación y organización cortical a través del entrenamiento de lateralidad en suelo pélvico en pacientes con Dolor Pélvico Crónico. El objetivo del estudio es validar la capacidad discriminante de las imágenes entre sujetos sanos y aquellos diagnosticados de Dolor Pélvico Crónico.
+				Su participación en este estudio es totalmente voluntaria, no le supondrá ningún gasto ni recompensa económica. 
+				Toda la documentación referente a su persona será absolutamente confidencial y únicamente estará a disposición de la investigadora principal y su equipo.   
+				La investigadora del estudio reconoce la importancia y trascendencia del mismo y, por lo tanto, está dispuesta a publicar los resultados en una revista, publicación o reunión científica a determinar en el momento oportuno.
+				De antemano, ella y su equipo, quieren agradecer su tiempo, atención e interés. 
+			</div>
+
+			<br>
+
+			<span class="line"></span>
+
+			<div class="form-group">
+				<label>
+
+					EL/LA PARTICIPANTE DECLARO: Que he recibido y comprendido la información sobre el estudio, pudiendo realizar cuantas preguntas he considerado oportunas. Que en cualquier momento puedo revocar mi consentimiento. En consecuencia:
+					
+				</label>
+				<div style="text-align: left;">
+					<!-- <div class="input-addon">
+						<ion-icon name="mail-outline"></ion-icon>
+					</div>
+					<input type="email" formControlName="email" [placeholder]="'PH.email' | translate"> -->
+
+					<br>
+
+					<label>
+						<input type="checkbox" (change)="changeConcentimiento()" formControlName="concentimiento">
+
+						DOY MI CONSENTIMIENTO PARA PARTICIPAR EN EL ESTUDIO
+					</label>
+				</div>
+				<div class="validation-errors">
+		          <ng-container *ngFor="let validation of validation_messages.concentimiento">
+		            <div class="error-message" *ngIf="validations_form.get('concentimiento').hasError(validation.type) && (validations_form.get('concentimiento').dirty || validations_form.get('concentimiento').touched)">
+		              {{ validation.message }}
+		            </div>
+		          </ng-container>
+		        </div>
+			</div>
+
+			<button [disabled]="!validations_form.valid" class="btn-mh">{{"REG.continue" | translate}}</button>
+
+		</form>
+	</div>
+
+	<div style="padding: 0 20px" *ngIf="step == 2">
+		<br>
+		<h6 class="tv">{{"REG.subtitle_2" | translate}}</h6>
+		<br>
+		<span class="line"></span>
+
+		<ion-row>
+			<ion-col size="6">
+				<div class="man gender-box" (click)="nextStep('m')">
+					<div>
+						<img src="assets/man.svg" alt="">
+					</div>
+				</div>
+			</ion-col>
+
+			<ion-col size="6">
+				<div class="woman gender-box" (click)="nextStep('f')">
+					<div>
+						<img src="assets/woman.svg" alt="">
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+
+	<div *ngIf="step == 3">
+		<div style="padding: 0 20px">
+			<br>
+			<h6 class="tv">{{"REG.subtitle_3" | translate}}</h6>
+			<br>
+			<p style="margin-top: 8px; font-size: 15px; color: #333; font-weight: bold;">{{"REG.paragraph" | translate}}</p>
+		</div>
+
+		<form class="form" [formGroup]="validations_form2">
+			<ion-list style="border-top: 1px solid #d7d8da; padding: 0">
+				<ion-item [ngClass]="validations_form2?.get('birthday')?.hasError('required') ? 'error' : ''">
+					<label position="fixed" style="font-size: 14px; padding-left: 16px">{{"REG.birthday" | translate}}</label>
+					<ion-datetime display-format="DD MMM, YYYY" [doneText]="'REG.accept' | translate" [cancelText]="'REG.cancel' | translate"
+					[monthShortNames]="'REG.months' | translate"
+					class="text-blue" (ionChange)="checkAge()" formControlName="birthday" [(ngModel)]="birthday"></ion-datetime>
+				</ion-item>
+
+				<div class="validation-errors">
+		          <ng-container>
+		            <div class="error-message" *ngIf="younger && birthday" style="padding: 10px 0;">
+		              {{'VD.reg_vd_10' | translate}}
+		            </div>
+		          </ng-container>
+		        </div>
+
+		        <br>
+
+				<ion-item [ngClass]="validations_form2?.get('titulation')?.hasError('required') ? 'error' : ''" *ngIf="api.type == 2">
+					<label position="fixed" style="font-size: 14px; padding-left: 16px">Titulación</label>
+					<ion-input style="padding-left: 10px !important" class="text-blue" formControlName="titulation" type="text" [(ngModel)]="titulation" [placeholder]="'REG.write' | translate"></ion-input>
+				</ion-item>
+
+				<!-- <ion-item [ngClass]="validations_form2?.get('titulation')?.hasError('required') ? 'error' : ''" *ngIf="api.type == 3">
+					<label position="fixed" style="font-size: 14px; padding-left: 16px">Código de profesional</label>
+					<ion-input style="padding-left: 10px !important" class="text-blue" formControlName="titulation" type="text" [(ngModel)]="titulation" [placeholder]="'REG.write' | translate"></ion-input>
+				</ion-item> -->
+
+			</ion-list>
+		</form>
+
+		<div>
+			
+			<div style="text-align: center; margin-top: 8px; padding: 0 20px">
+
+				<!-- <div class="data-info" style="margin: 16px;">
+			      {{"REG.if_pain" | translate}}
+			    </div> -->
+			    
+				<!-- <ion-toggle [disabled]="younger" style="left: -12px" [(ngModel)]="withPain"></ion-toggle> <label *ngIf="withPain" style="position: relative; top:-13px;">{{"REG.w_pain" | translate}}</label> <label *ngIf="!withPain" style="position: relative; top:-13px;">{{"REG.wo_pain" | translate}}</label> -->
+			
+				<!-- <ion-list style="--inner-padding-top: 0">
+				  <ion-radio-group [(ngModel)]="withPain" (ionChange)="setPain()">
+				    <ion-item class="ion-no-padding">
+				      <ion-label>{{ "REG.wo_pain" | translate }}</ion-label>
+				      <ion-radio [disabled]="younger" value=""></ion-radio>
+				    </ion-item>
+
+				    <ion-item class="ion-no-padding">
+				      <ion-label>{{ "REG.w_pain" | translate }}</ion-label>
+				      <ion-radio [disabled]="younger" value="1"></ion-radio>
+				    </ion-item>
+				  </ion-radio-group>
+				</ion-list> -->
+			</div>
+
+
+
+			<div *ngIf="withPain" [ngStyle]="{'display': younger ? 'none' : 'block'}">
+				<div *ngFor="let q of questions" [attr.data-question]="q._question" [attr.data-type]="q.type">
+
+					<div id="register-header" style="background-color: #f0eff4; border-bottom: 1px solid #d7d8da; padding: 16px">
+						<p style="margin: 0; font-size: 15px; color: #333; font-weight: bold; text-align: left;">{{q._question}}</p>
+					</div>
+					
+					<div *ngIf="q.type == 'checkbox'">
+						<ion-list style="padding: 0">
+							<ion-item *ngFor="let o of q.options" style="font-size: 14px;">
+								<ion-label style="font-size: 14px; white-space: normal; padding-left: 16px">{{o._option}}</ion-label>
+								<ion-toggle [attr.data-option]="o._option" [value]="o.value"></ion-toggle>
+							</ion-item>
+						</ion-list>
+					</div>
+
+					<div *ngIf="q.type == 'select'">
+						<ion-list style="padding: 0">
+							<ion-item>
+								<ion-label style="font-size: 14px; white-space: normal; min-width: 50%; padding-left: 16px" position="fixed">{{q._placeholder}}</ion-label>
+								<ion-select cancelText="Cancelar">
+									<ion-select-option [value]="o.value" *ngFor="let o of q.options">{{o._option}}</ion-select-option>
+								</ion-select>
+							</ion-item>
+						</ion-list>
+					</div>
+
+					<div *ngIf="q.type == 'range'">
+						<ion-list style="padding: 0">
+							<ion-item rangeCss *ngFor="let o of q.options">
+							  	<div class="range-min">{{(o.value | range)[0]}}</div>
+						    	<ion-range pin="false" style="padding: 0 10px" [min]="(o.value | range)[0]" [max]="(o.value | range)[1]" color="primary"></ion-range>
+							  	<div class="range-max">{{(o.value | range)[1]}}</div>
+						  	</ion-item>
+
+						</ion-list>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div style="padding: 0 20px; margin-top: 15px">
+			<button [disabled]="!validations_form2.valid" class="btn-mh" (click)="checkAnswers()">Continuar</button>
+		</div>
+	</div>
+
+
+
+</ion-content>

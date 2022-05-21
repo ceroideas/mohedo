@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+  	<ion-buttons slot="start">
+      <ion-back-button text="" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'PROFILE.prf_tr_1' | translate}}</ion-title>
+    <ion-buttons slot="end">
+  	  <!-- <ion-button icon-only (click)="exit()"><ion-icon name="exit-outline"></ion-icon></ion-button> -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<!-- <div id="register-header" *ngIf="step == 1">
+		<img src="assets/mohedo-logo.png" alt=""> <span>MOHEDO IMG - Suelo Pélvico</span>
+	</div> -->
+	<div style="padding: 0 20px">
+		<h6 class="tv">{{'PROFILE.prf_tr_2' | translate}}</h6>
+
+		<form class="form" [formGroup]="validations_form" (ngSubmit)="saveUserData(validations_form.value)">
+
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-addon">
+						<ion-icon name="person"></ion-icon>
+					</div>
+					<input type="text" formControlName="name" disabled [placeholder]="'PROFILE.prf_tr_3' | translate">
+				</div>
+				<div class="validation-errors">
+		          <ng-container *ngFor="let validation of validation_messages.name">
+		            <div class="error-message" *ngIf="validations_form.get('name').hasError(validation.type) && (validations_form.get('name').dirty || validations_form.get('name').touched)">
+		              {{ validation.message }}
+		            </div>
+		          </ng-container>
+		        </div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-addon">
+						<ion-icon name="key"></ion-icon>
+					</div>
+					<input type="password" formControlName="password" [placeholder]="'PROFILE.prf_tr_4' | translate">
+				</div>
+				<div class="validation-errors">
+		          <ng-container *ngFor="let validation of validation_messages.password">
+		            <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+		              {{ validation.message }}
+		            </div>
+		          </ng-container>
+		        </div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-addon">
+						<ion-icon name="key"></ion-icon>
+					</div>
+					<input type="password" formControlName="repeat_password" [placeholder]="'PROFILE.prf_tr_5' | translate">
+				</div>
+				<div class="validation-errors">
+		          <ng-container *ngFor="let validation of validation_messages.repeat_password">
+		            <div class="error-message" *ngIf="validations_form.get('repeat_password').hasError(validation.type) && (validations_form.get('repeat_password').dirty || validations_form.get('repeat_password').touched)">
+		              {{ validation.message }}
+		            </div>
+		          </ng-container>
+		        </div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-addon">
+						<ion-icon name="mail-outline"></ion-icon>
+					</div>
+					<input type="email" formControlName="email" [placeholder]="'PROFILE.prf_tr_6' | translate">
+				</div>
+				<div class="validation-errors">
+		          <ng-container *ngFor="let validation of validation_messages.email">
+		            <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+		              {{ validation.message }}
+		            </div>
+		          </ng-container>
+		        </div>
+			</div>
+
+			<span class="line" style="width: 100%; margin: 0;"></span>
+
+			<div *ngIf="user?.role_id == 1">
+				
+				<ion-item lines="none" class="ion-no-padding">
+					<label style="font-size: 14px">{{'PROFILE.prf_tr_7' | translate}}</label>
+					<span>
+						<ion-toggle style="padding: 12px 0 12px 12px;" [checked]="user?.reference" (ionChange)="changeProf($event)"></ion-toggle>
+					</span>
+				</ion-item>
+
+				<div class="form-group" *ngIf="professional">
+					<div class="input-group">
+						<div class="input-addon">
+							<ion-icon name="add-circle-outline"></ion-icon>
+						</div>
+						<input type="text" formControlName="code" [placeholder]="'PROFILE.prf_tr_8' | translate">
+					</div>
+				</div>
+			</div>
+
+			<div *ngIf="user?.role_id == 2" style="text-align: center;">
+				<h5 style="color: gray">{{'PROFILE.prf_tr_9' | translate}}</h5>
+
+				<h3>{{user?.reference}}</h3>
+
+			</div>
+
+			<span class="line" style="width: 100%;"></span>
+
+			<button [disabled]="!validations_form.valid" class="btn-mh">{{'PROFILE.prf_tr_10' | translate}}</button>
+
+		</form>
+
+		<span class="line"></span>
+
+		<div class="data-info">
+			{{'PROFILE.prf_tr_11' | translate}}
+		</div>
+	</div>
+
+</ion-content>

@@ -1,0 +1,153 @@
+<ion-header>
+  <ion-toolbar hidden>
+    <ion-title>recover</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<div id="main-content">
+		<div id="top-content">
+			<div id="logo">
+				<img src="assets/mohedo-logo.png" alt="">
+			</div>
+		</div>
+
+		<div id="bottom-content">
+
+			<div id="center-block">
+
+				<h4 [innerHTML]="'LOGIN.title' | translate"></h4>
+				<h3>{{'LOGIN.subtitle' | translate}}</h3>
+
+				<form class="form" [formGroup]="validations_form" (ngSubmit)="sendCode(validations_form.value)" *ngIf="step == 1">
+
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-addon">
+								<ion-icon name="mail-outline"></ion-icon>
+							</div>
+							<input type="text" formControlName="email" [placeholder]="'PH.email' | translate">
+						</div>
+						<div class="validation-errors">
+				          <ng-container *ngFor="let validation of validation_messages.email">
+				            <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+				              {{ validation.message }}
+				            </div>
+				          </ng-container>
+				        </div>
+					</div>
+
+					<!-- <div class="form-group">
+						<div class="input-group">
+							<div class="input-addon">
+								<ion-icon name="key"></ion-icon>
+							</div>
+							<input type="password" formControlName="password" [placeholder]="'PH.pass' | translate">
+						</div>
+						<div class="validation-errors">
+				          <ng-container *ngFor="let validation of validation_messages.password">
+				            <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+				              {{ validation.message }}
+				            </div>
+				          </ng-container>
+				        </div>
+					</div> -->
+
+					<button type="submit" [disabled]="!validations_form.valid" class="btn-mh">Enviar código de recuperación</button>
+
+				</form>
+
+				<!-- /**/ -->
+
+				<form class="form" [formGroup]="validations_form1" (ngSubmit)="checkCode(validations_form1.value)" *ngIf="step == 2">
+
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-addon">
+								<ion-icon name="barcode-outline"></ion-icon>
+							</div>
+							<input type="text" formControlName="code" [placeholder]="'Código'">
+						</div>
+						<div class="validation-errors">
+				          <ng-container *ngFor="let validation of validation_messages1.code">
+				            <div class="error-message" *ngIf="validations_form1.get('code').hasError(validation.type) && (validations_form1.get('code').dirty || validations_form1.get('code').touched)">
+				              {{ validation.message }}
+				            </div>
+				          </ng-container>
+				        </div>
+					</div>
+
+					<!-- <div class="form-group">
+						<div class="input-group">
+							<div class="input-addon">
+								<ion-icon name="key"></ion-icon>
+							</div>
+							<input type="password" formControlName="password" [placeholder]="'PH.pass' | translate">
+						</div>
+						<div class="validation-errors">
+				          <ng-container *ngFor="let validation of validation_messages.password">
+				            <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+				              {{ validation.message }}
+				            </div>
+				          </ng-container>
+				        </div>
+					</div> -->
+
+					<button type="submit" [disabled]="!validations_form1.valid" class="btn-mh">Comprobar código</button>
+
+				</form>
+
+				<!-- /**/ -->
+
+				<form class="form" [formGroup]="validations_form2" (ngSubmit)="changePassword(validations_form2.value)" *ngIf="step == 3">
+
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-addon">
+								<ion-icon name="key"></ion-icon>
+							</div>
+							<input type="password" formControlName="password" [placeholder]="'PH.pass' | translate">
+						</div>
+						<div class="validation-errors">
+				          <ng-container *ngFor="let validation of validation_messages2.password">
+				            <div class="error-message" *ngIf="validations_form2.get('password').hasError(validation.type) && (validations_form2.get('password').dirty || validations_form2.get('password').touched)">
+				              {{ validation.message }}
+				            </div>
+				          </ng-container>
+				        </div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-addon">
+								<ion-icon name="key"></ion-icon>
+							</div>
+							<input type="password" formControlName="repeat_password" [placeholder]="'PH.repeat' | translate">
+						</div>
+						<div class="validation-errors">
+				          <ng-container *ngFor="let validation of validation_messages2.repeat_password">
+				            <div class="error-message" *ngIf="validations_form2.get('repeat_password').hasError(validation.type) && (validations_form2.get('repeat_password').dirty || validations_form2.get('repeat_password').touched)">
+				              {{ validation.message }}
+				            </div>
+				          </ng-container>
+				        </div>
+					</div>
+
+					<button type="submit" [disabled]="!validations_form2.valid" class="btn-mh">Cambiar la contraseña</button>
+
+				</form>
+
+				<a (click)="navCtrl.pop()">Volver</a>
+				<br>
+				<br>
+			</div>
+			
+		</div>
+	</div>
+
+</ion-content>
+
+<ion-footer>
+	<b><img src="assets/cp.png" style="width: 14px;" alt=""> Universidad de Málaga</b> <br> Versión 1.0.1
+</ion-footer>

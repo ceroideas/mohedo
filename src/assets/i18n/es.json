@@ -1,0 +1,233 @@
+{
+	"PH": {
+		"name":"Nombre (requerido)",
+		"user":"Usuario (requerido)",
+		"pass":"Contraseña (requerida)",
+		"repeat":"Repita la contraseña (requerido)",
+		"email":"Correo (requerido)",
+		"code":"Código de profesional (si lo tiene)"
+	},
+	"VD": {
+		"code.required":"El campo de código es requerido." ,
+		"user.required":"El campo de usuario es requerido." ,
+		"password.required":"El campo contraseña es requerido." ,
+		"password.min":"La contraseña debe tener al menos 8 carácteres." ,
+		"password.valid":"La contraseña debe contener al menos un carácter en minúscula, uno en mayúscula y un número.",
+
+		"reg_vd_1":"El campo de usuario es requerido.",
+		"reg_vd_2":"La usuario debe tener al menos 4 carácteres.",
+		
+		"reg_vd_1_1":"El campo de nombre es requerido.",
+		"reg_vd_2_1":"La nombre debe tener al menos 4 carácteres.",
+
+		"reg_vd_3":"El campo contraseña es requerido." ,
+		"reg_vd_4":"La contraseña debe tener al menos 8 carácteres.",
+		"reg_vd_5":"La contraseña debe contener al menos un carácter en minúscula, uno en mayúscula y un número.",
+		"reg_vd_6":"El campo repetir contraseña es requerido.",
+		"reg_vd_7":"Las contraseñas deben ser iguales.",
+		"reg_vd_8":"El campo email es requerido.",
+		"reg_vd_9":"El email debe tener un formato correcto.",
+		"reg_vd_10":"¡No puede participar en el formulario si es menor de edad!.",
+		"reg_vd_11":"Ya puede iniciar sesion.",
+		"reg_vd_12":"Debe contestar todas las preguntas con opciones."
+	},
+	"LOGIN": {
+		"title": "IMAGINERÍA MOTORA GRADUADA <br> <small>PARA</small>",
+		"subtitle": "SUELO PÉLVICO",
+		"enter":"Entrar",
+		"create":"Crear cuenta"
+	},
+	"REG": {
+		"steps": "Registro (paso {{value}} de 3)",
+		"title":"MOHEDO IMG - Suelo Pélvico",
+		"subtitle":"En primer lugar, escriba sus datos personales:",
+		"recomended":"Pulse si usa esta aplicación por recomendación de un profesional",
+		"continue":"Continuar",
+		"info":"Sus datos son únicos e intransferibles. Le recomendamos no usar datos ya empleados en otras plataformas. La contrseña deberá tener un minimo de 8 caracteres e incluir al menos un número y una letra mayúscula.",
+		"subtitle_2":"Por favor, indique su sexo:",
+		"subtitle_3":"Perfil personal y clínico",
+		"paragraph":"Para conocer su estado actual de salud, por favor, responda a las siguientes cuestiones:",
+		"months":"Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic",
+		"accept":"Ok",
+		"cancel":"Cancelar",
+		"birthday":"Fecha de nacimiento",
+		"weight":"Peso (kg)",
+		"height":"Altura (cm)",
+		"write":"Escriba",
+		"if_pain":"¿Tienes Dolor Pélvico hoy?",
+		"w_pain":"Con Dolor Pélvico",
+		"wo_pain":"Sin Dolor Pélvico",
+		"register":"Registrarme"
+	},
+	"HOME": {
+		"home_tr_1":"Seleccione una opción del menú:",
+		"home_tr_2":"Instrucciones",
+		"home_tr_3":"Mis datos",
+		"home_tr_4":"Resultados de pacientes",
+		"home_tr_5":"Instrucciones",
+		"home_tr_6":"Comenzar",
+		"home_tr_7":"Mis datos",
+		"home_tr_8":"Resultados",
+		"home_tr_9":"Pulse 'Comenzar' para realizar la prueba de entrenamiento de lateralidad ahora. Si lo desea, puede revisar su Histórico, editar sus datos de usuario o leer un poco más sobre la base científica de esta terapia."
+	},
+	"FUNDAMENTS": {
+		"fnd_tr_1":"Instrucciones",
+		"fnd_tr_2":"<small>IMAGINERÍA MOTORA GRADUADA</small> <br> SUELO PÉLVICO",
+		"fnd_tr_3":"¿Qué es y para qué sirve esta App?",
+		"fnd_tr_4":"Esta app es una herramienta de rehabilitación indicada para entrenar el cerebro y conseguir reducir el dolor crónico de la zona genital.",
+		"fnd_tr_5":"La investigación muestra que las personas con dolor a menudo pierden la capacidad de identificar imágenes izquierdas o derechas de sus partes dolorosas del cuerpo. <br><br> Esta capacidad parece ser importante para la recuperación normal del dolor. La buena noticia es que el cerebro es plástico y cambiante, si recibe el entrenamiento adecuado durante el tiempo suficiente.",
+		"fnd_tr_6":"¿Qué he de hacer?",
+		"fnd_tr_7":"Pues has de entrenar la lateralidad, juzgando, sobre una secuencia de fotografías, si la sección corporal de la zona genital que aparece corresponde al lado izquierdo o derecho del cuerpo.",
+		"fnd_tr_8":"Preguntas frecuentes ",
+		"fnd_tr_final":"No es tan importante realizar la sesión en un tiempo récord como sí asegurarte, en lo posible, de que reconoces la lateralidad (si es lado izquierdo o derecho) de cada imagen. ¡Seguro que cada vez lo consigues en menos tiempo!",
+		"faqs": [
+			{
+				"question":"¿Cómo puedo ver qué he de hacer con esta app?",
+				"answer":"El núcleo de la app son las sesiones de terapia, consistente en el ejercicio de lateralidad, con dificultad variable."
+			},
+			{
+				"question":"¿Durante cuánto tiempo debo realizar la terapia?",
+				"answer":"Es aconsejable que la realices durante 6 semanas, a razón de 3 sesiones al día, con un tiempo mínimo de separación entre sesiones de 4 horas. Será tu profesional (médico, fisioterapeuta, etc.) el que, tras valorar tus resultados, te aconseje continuar con la terapia, así como posibles cambios en la pauta de uso; o incluso dejar de usar la app si considerase que no es idónea para ti."
+			},
+			{
+				"question":"¿Cuántas veces al día he de realizar la terapia? ",
+				"answer":"Es aconsejable que la hagas 3 veces al día, con un tiempo de separación entre sesiones de al menos 4 horas."
+			},
+			{
+				"question":"¿Qué pasa si no he realizado la terapia 3 veces al día?",
+				"answer":"No pasa nada, siempre será mejor hacer 2 sesiones o 1 al día, que no realizar ninguna. Intenta hacer las 3 sesiones en los días siguientes, ya que se estima que dicha frecuencia es la que mejores efectos conseguirá."
+			},
+			{
+				"question":"¿Qué pasa si al hacer la sesión aumenta la intensidad de mi dolor?",
+				"answer":"No te alarmes. Aunque pequeña, esa posibilidad existe. Puede deberse a una “resistencia” que  genera tu cerebro a incluir esa parte anatómica en tu esquema corporal. Sigue practicando durante 2 días más, y si el dolor persiste en ese nivel aumentado, consúltalo con tu profesional (médico, fisioterapeuta, etc.), quien te recomendará lo más adecuado para tu caso: desde seguir practicando en la seguridad de que esa situación es transitoria, a abandonar la terapia si sencillamente estimase que no te reporta el beneficio deseado."
+			},
+			{
+				"question":"¿Puedo combinar esta terapia con otros tratamientos que estoy recibiendo para mi dolor (fármacos, fisioterapia, rehabilitación, etc.)?",
+				"answer":"Sí, ya que no existe contraindicación para hacerlo. La imaginería motora combinada con otros tratamientos convencionales es capaz de producir cambios cualitativos en la funcionalidad y sensibilidad del individuo, sin que haya necesidad de realizar modificaciones en dichos tratamientos."
+			},
+			{
+				"question":"¿Qué hacer si no recuerdo mi usuario y contraseña?",
+				"answer":"En la página principal de la app, nada más pulsar su icono en tu menú de inicio, tienes una opción de recuperación de contraseña. Se te solicitará el correo que usaste en el registro, por lo que debes emplear uno habitual o que recuerdes fácilmente. Si ya has iniciado sesión, puedes revisar tu usuario, contraseña y correo en la sección “Mis datos”."
+			},
+			{
+				"question":"¿Por qué he de cumplimentar un formulario clínico?",
+				"answer":"Es la forma de adecuar las sesiones a tu situación clínica particular. Se trata de un formulario anónimo: en ningún momento te pedimos datos identificativos. Todo el proceso se realiza bajo nombre de usuario, no con tu nombre real. Únicamente si optas por el seguimiento profesional (es decir, si usas la app bajo prescripción de un fisioterapeuta) este podrá manejar contigo la información relativa a tu progreso."
+			},
+			{
+				"question":"¿Qué tratamiento se da a mis datos?",
+				"answer":"Tus datos, siempre anónimos, únicamente nos sirven para elaborar tu perfil. Y por supuesto, no se cederán a terceros ni se usarán para otros fines que el de optimizar tu uso de la app."
+			},
+			{
+				"question":"¿Debo utilizar esta app bajo prescripción de un fisioterapeuta?",
+				"answer":"No necesariamente, puedes utilizarla de modo totalmente personal e independiente. Pero si consideras que tu situación clínica lo requiere, será bueno que tu fisioterapeuta realice contigo un seguimiento de tu uso de la app y de tus avances."
+			},
+			{
+				"question":"¿Qué ocurre al terminar la sesión?",
+				"answer":"Verás los resultados de la misma, tanto numéricamente como en forma de gráfica, siendo esta última muy útil para apreciar tu evolución, por días, semanas o meses."
+			},
+			{
+				"question":"Me gustaría saber algo más sobre el tipo de información que obtendré",
+				"answer":"Al final de cada sesión verás un mensaje de confirmación, que podrá incluir una felicitación, o información sobre posibles avances de nivel. Inmediatamente, se te mostrarán los aciertos de la sesión en una tabla, además de otros datos de interés (tiempo y nivel de dolor). Y podrás acceder a las gráficas, donde verás de forma sencilla tu curva de evolución en cada uno de esos factores (aciertos, tiempo y nivel de dolor). Todo, debidamente explicado. ¡Enseguida las manejarás con soltura y comprobarás su utilidad!"
+			},
+			{
+				"question":"¿Qué sucede si no me gusta la app?",
+				"answer":"Podrás abandonar la sesiones de terapia en cualquier momento y, si lo deseas, probar de nuevo otro día. Si finalmente decides que esta app no es para ti, siempre podrás desinstalarla. Por supuesto, todos tus datos se eliminarán."
+			}
+		]
+	},
+	"PAIN": {
+		"pain_tr_1":"Comenzando",
+		"pain_tr_2":"Valore su nivel de Dolor Pélvico en éste momento:",
+		"pain_tr_3":"¿Tienes Dolor Pélvico hoy?",
+		"pain_tr_4":"¿Tienes Dolor Pélvico hoy?",
+		"pain_tr_5":"Si siente Dolor Pélvico, seleccione la opción",
+		"pain_tr_6":"Utilice el dedo para indicar el punto que corresponda a su percepción de Dolor Pélvico.",
+		"pain_tr_7":"0/Sin dolor",
+		"pain_tr_8":"10/Máximo dolor",
+		"pain_tr_9":"Continuar",
+		"pain_tr_10":"No tengo Dolor Pélvico hoy",
+		"pain_tr_11":"Si tengo Dolor Pélvico hoy"
+	},
+	"BEGIN": {
+		"begin_tr_1":"Comenzando",
+		"begin_tr_2":"Saltar",
+		"begin_tr_3":"A continuación, aparecerán unas imágenes relacionadas con la zona pélvica y genital. Por favor, indique lo más rápido posible a qué lado corresponde: derecho o izquierdo",
+		"begin_tr_4":"Ver video de ejemplo",
+		"begin_tr_5":"¡Vamos allá!"
+	},
+	"IMAGES": {
+		"img_tr_1":"Sesión en curso",
+		"img_tr_2":"Izquierda",
+		"img_tr_3":"Derecha"
+	},
+	"REPORT": {
+		"rep_tr_1":"Informe de sesión",
+		"rep_tr_2":"Sesión completada",
+		"rep_tr_3":"Resultados del",
+		"rep_tr_4":"a las",
+		"rep_tr_5":"Nivel",
+		"rep_tr_6":"de 10",
+		"rep_tr_7":"Valor de Dolor Pélvico:",
+		"rep_tr_8":"sobre 10",
+		"rep_tr_9":"de aciertos en",
+		"rep_tr_10":"segundos",
+		"rep_tr_11":"Respuesta <br> dada",
+		"rep_tr_12":"Tiempo <br> empleado",
+		"rep_tr_13":"Respuesta <br> correcta",
+		"rep_tr_14":"seg",
+		"rep_tr_15":"Izquierda",
+		"rep_tr_16":"Derecha",
+		"rep_tr_17":"Ver gráfica"
+	},
+	"RESULTS": {
+		"res_tr_1_0":"Resultados del día",
+		"res_tr_1_1":"Resultados de la semana",
+		"res_tr_1_2":"Resultados del mes",
+		"res_tr_2":"Ver resultados del día",
+		"res_tr_3":"Ver resultados de la semana",
+		"res_tr_4":"Ver resultados del último mes",
+		"res_tr_5":"No haz realizado ninguna sesión hoy. Realice al menos una sesión de terapia para ver sus resultados. También puedes consultar tu histórico de sesiones (Semana y/o Mes).",
+		"res_tr_6":"Tiempo",
+		"res_tr_7":"Dolor",
+		"res_tr_8":"Aciertos",
+		"res_tr_9":"Realizar nueva sesión",
+		"res_tr_10":"Pulsa sobre las cajas de colores si quieres conocer tus resultados por separado. Aciertos muestra el porcentaje obtenido en la sesión. El Tiempo te muestra en qué proporción coincide tu tiempo con el de la gente sana. El Dolor es la puntuación de dolor que indicaste, de 0 a 10.",
+		"today":"Hoy a las "
+	},
+	"PROFILE": {
+		"prf_tr_1":"Mis Datos",
+		"prf_tr_2":"Aquí puede editar sus datos como usuario del sistema",
+		"prf_tr_3":"Usuario (requerido)",
+		"prf_tr_4":"Contraseña (requerida)",
+		"prf_tr_5":"Repita la contraseña (requerido)",
+		"prf_tr_6":"Correo (requerido)",
+		"prf_tr_7":"Pulse si usa esta aplicación por recomendación de un profesional",
+		"prf_tr_8":"Código de profesional (si lo tiene)",
+		"prf_tr_9":"Tú código de profesional es:",
+		"prf_tr_10":"Guardar",
+		"prf_tr_11":"No es posible cambiar el nombre de usuario. Sus datos de acceso serán únicos e intransferibles. Le recomendamos no usar datos ya empleados en otras plataformas. La contrseña deberá tener un minimo de 8 caracteres e incluir al menos un número y una letra mayúscula.",
+		"prf_tr_12":"El campo de usuario es requerido" ,
+		"prf_tr_13":"La usuario debe tener al menos 4 caracteres",
+		"prf_tr_14":"El campo contraseña es requerido" ,
+		"prf_tr_15":"La contraseña debe tener al menos 8 caracteres",
+		"prf_tr_16":"El campo repetir contraseña es requerido" ,
+		"prf_tr_17":"Las contraseñas deben ser iguales" ,
+		"prf_tr_18":"El campo email es requerido" ,
+		"prf_tr_19":"El email debe tener un formato correcto",
+		"prf_tr_20":"Se ha guardado la información del usuario"
+	},
+	"PACIENT": {
+		"pcnt_tr_0":"Mis Pacientes",
+		"pcnt_tr_1":"Fecha de nacimiento:",
+		"pcnt_tr_2":"Sexo:",
+		"pcnt_tr_3":"Peso:",
+		"pcnt_tr_4":"Puntuación Interna:",
+		"pcnt_tr_5":"Nivel actual:",
+		"pcnt_tr_6":"Masculino",
+		"pcnt_tr_7":"Femenino",
+		"pcnt_tr_8":"Altura:",
+		"pcnt_tr_9":"Éste paciente ha indicado que no siente dolor",
+		"pcnt_tr_10":"Ver respuestas del perfil del usuario",
+		"pcnt_tr_11":"Ver gráfica del paciente"
+	}
+}
